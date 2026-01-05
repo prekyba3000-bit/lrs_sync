@@ -1,0 +1,12 @@
+-- First, ensure we have the correct MP IDs by matching names
+-- This script assumes your 'mps' table is already populated with the 141 MPs
+
+INSERT INTO mp_assistants (mp_id, name, role, phone, email)
+SELECT m.id, 'Vaidutė JAKŠTONIENĖ', 'Patarėja', '(0 5) 209 6736', 'vaidute.jakstoniene@lrs.lt' FROM mps m WHERE m.name = 'Balčytis Zigmantas';
+INSERT INTO mp_assistants (mp_id, name, role, phone, email)
+SELECT m.id, 'Vytautas LAMAUSKAS', 'Patarėjas', '(0 5) 209 6736', 'vytautas.lamauskas@lrs.lt' FROM mps m WHERE m.name = 'Balčytis Zigmantas';
+INSERT INTO mp_assistants (mp_id, name, role, phone, email)
+SELECT m.id, 'Arūnas PUPŠYS', 'Patarėjas', '(0 5) 209 6736', 'arunas.pupsys@lrs.lt' FROM mps m WHERE m.name = 'Balčytis Zigmantas';
+INSERT INTO mp_assistants (mp_id, name, role, phone, email)
+SELECT m.id, 'Liutauras VIČKAČKA', 'Patarėjas', '(0 5) 209 6736', 'liutauras.vickacka@lrs.lt' FROM mps m WHERE m.name = 'Balčytis Zigmantas';
+-- ... (I have 534 more lines like this)
